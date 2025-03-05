@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('bg1.jpg');/*linear-gradient(135deg, #1e3c72, #2a5298);*/
+    background: url('bg1.jpg')no-repeat center center fixed;/*linear-gradient(135deg, #1e3c72, #2a5298);*/
     background-size: cover;
     color: white;
     text-align: center;
