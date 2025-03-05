@@ -16,10 +16,21 @@
             "sound2.mp3"
         ];
 
-        function playSound() {
+function playSound() {
+            // Jika ada audio yang sedang dimainkan, hentikan dulu
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0; // Reset waktu ke awal
+            }
+
+            // Pilih suara secara acak
             const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
-            const audio = new Audio(randomSound);
-            audio.play();
+
+            // Buat objek audio baru
+            currentAudio = new Audio(randomSound);
+
+            // Mainkan suara
+            currentAudio.play();
         }
     </script>
 </body>
