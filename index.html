@@ -10,13 +10,15 @@
     <button onclick="playSound()">Play Sound</button>
 
     <script>
-        // File MP3 ada di GitHub Pages, jadi gunakan path relatif
+        // Daftar file suara
         const sounds = [
             "sound1.mp3",
             "sound2.mp3"
         ];
 
-function playSound() {
+        let currentAudio = null; // Variabel untuk menyimpan audio yang sedang dimainkan
+
+        function playSound() {
             // Jika ada audio yang sedang dimainkan, hentikan dulu
             if (currentAudio) {
                 currentAudio.pause();
@@ -35,3 +37,4 @@ function playSound() {
     </script>
 </body>
 </html>
+
