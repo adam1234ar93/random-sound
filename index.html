@@ -21,7 +21,10 @@
 
         function playSound() {
             // Jika ada audio yang sedang dimainkan, hentikan dulu
-
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0; // Reset waktu ke awal
+            }
             // Pilih suara secara acak
             const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
 
