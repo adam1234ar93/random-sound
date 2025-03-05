@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound Player</title>
+</head>
+<body>
+    <h2>Memainkan Suara Acak...</h2>
+
+    <script>
+        // Daftar file suara yang tersedia
+        const sounds = [
+            "https://example.com/sound1.mp3",
+            "https://example.com/sound2.mp3",
+            "https://example.com/sound3.mp3"
+        ];
+
+        // Pilih suara secara acak
+        const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+
+        // Buat elemen audio
+        const audio = new Audio(randomSound);
+        
+        // Mainkan suara
+        audio.play();
+    </script>
+</body>
+</html>
